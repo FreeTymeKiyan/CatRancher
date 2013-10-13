@@ -18,21 +18,26 @@ public class CatRancher implements Constants{
     public static void main(String args[]) {
         // scan input
         Scanner scan = new Scanner(System.in);
-        while (scan.hasNext()) {
-            String next = scan.next();
-            if (!isInputValid(next)) {
-                System.out.println("invalud input: " + next);
-            } else { // input valid
-                haul.add(next);
-                int size = haul.size();
-//                System.out.println("current haul size: " + size);
-                if (size == HAUL_SIZE) {
-//                    System.out.println("haul size reached");
-                    findQualityTrio();
-                    formatOutput();
-                    afterOutput();
-                } else {
-//                    System.out.println("plz add more cats to fill the haul");
+        while (scan.hasNextLine()) {
+            String[] nextLine = scan.nextLine().split(SPACE_SEPERATOR);
+            for (int i = 0; i < nextLine.length; i++) {
+                if (!isInputValid(nextLine[i])) {
+                    System.out.println("invalud input: " + nextLine[i]);
+                } else { // input valid
+                    haul.add(nextLine[i]);
+                    int size = haul.size();
+                    if (size == nextLine.length) {
+                        if (size == HAUL_SIZE_12 
+                                || size == HAUL_SIZE_15) {
+                            findQualityTrio();
+                            formatOutput();
+                            afterOutput();
+                        } else {
+                            System.out.println("size wrong, skip this line");
+                        }
+                    } else {
+            //                  System.out.println("plz add more cats to fill the haul");
+                    }
                 }
             }
         }
@@ -131,6 +136,7 @@ public class CatRancher implements Constants{
      */
     private static void afterOutput() {
         output.clear();
-        haul = haul.subList(HAUL_SIZE, haul.size());
+//        haul = haul.subList(HAUL_SIZE, haul.size());
+        haul.clear();
     }
 }

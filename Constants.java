@@ -32,7 +32,9 @@ public interface Constants {
             + "1trr 2trr 3trr"; // t ended
     
     /**The size of a haul*/
-    public static final int HAUL_SIZE = 12;
+    public static final int HAUL_SIZE_12 = 12;
+    /**The size of a haul*/
+    public static final int HAUL_SIZE_15 = 15;
     /**The valid length of an input*/
     public static final int VALID_INPUT_LENGTH = 4;
     /**
