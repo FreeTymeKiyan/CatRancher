@@ -1,5 +1,3 @@
-package com.freetymekiyan.catrancher;
-
 public interface Constants {
     
     /**All the possible inputs*/

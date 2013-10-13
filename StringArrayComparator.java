@@ -1,5 +1,3 @@
-package com.freetymekiyan.catrancher;
-
 import java.util.Comparator;
 
 /**
