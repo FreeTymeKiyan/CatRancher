@@ -6,6 +6,7 @@ Coding-Challenge by some company
 Usage
 ---
 javac *.java
+
 cat CatRancher.txt | java CarRancher 
 
 Input
