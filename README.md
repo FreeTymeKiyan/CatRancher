@@ -3,6 +3,11 @@ CatRancher
 
 Coding-Challenge by some company
 
+Usage
+---
+javac *.java
+cat CatRancher.txt | java CarRancher 
+
 Input
 ---
 * multiple lines of cat codes
@@ -21,9 +26,11 @@ QualityTrio
 Cat Code
 ---
 * Four type of attribute
-1. Stripes(1,2,3)
-2. Color(b,w,t)
-3. Shape(t,s,r)
-4. Eyes(g,b,r)
+
+ 1. Stripes(1,2,3)
+ 2. Color(b,w,t)
+ 3. Shape(t,s,r)
+ 4. Eyes(g,b,r)
+
 * choose each one in order and represent a cat
 eg: 1btg means a cat has one stripe, black color, tall shape, green eyes.
